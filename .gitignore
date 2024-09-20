@@ -1,0 +1,35 @@
+# Node.js dependencies (npm, Yarn, pnpm)
+node_modules/
+
+# Ignore lock files for npm, Yarn, and pnpm
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Yarn specific files
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# pnpm specific files
+.pnpm-debug.log
+
+# Ignore packages such as 'scroll-lock' (installed in node_modules)
+node_modules/scroll-lock/
+
+# Other package managers
+.DS_Store        # macOS specific files
+*.log            # Log files
+
+# Ignore environment files (optional)
+.env
+
+# Ignore build directories (optional)
+dist/
+build/
+
+# Ignore VS Code settings (optional)
+.vscode/
