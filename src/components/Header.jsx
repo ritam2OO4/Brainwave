@@ -12,10 +12,18 @@ function Header() {
     const pathname = useLocation();
     const [openNavigation, setOpenNavigation] = useState(true)
     const toggleNavigation = () => {
-        openNavigation ? setOpenNavigation(false) : setOpenNavigation(true)
-    }
+        if (openNavigation) {
+            setOpenNavigation(false);
+            enablePageScroll();
+        } else {
+            setOpenNavigation(true);
+            disablePageScroll();
+        }
+    };
+    
 
     const handleClick = () => {
+        if(!openNavigation) return
         setOpenNavigation(false)
     }
 
