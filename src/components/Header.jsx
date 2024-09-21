@@ -15,18 +15,17 @@ function Header() {
         if (openNavigation) {
             setOpenNavigation(false);
             enablePageScroll();
-        } else {
+           } else {
             setOpenNavigation(true);
             disablePageScroll();
-        }
+         }
     };
-    
+
 
     const handleClick = () => {
-        if(!openNavigation) return
+        if (!openNavigation) return
         setOpenNavigation(false)
     }
-
 
     return (
         <div className={`fixed top-0 left-0 w-full border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"}`}>
@@ -35,7 +34,7 @@ function Header() {
                     <img src={brainwave} alt="Brainwave" width={190} height={40} />
                 </a>
 
-                <nav className={`fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent ${useWindowSize() ? 'flex' : 'hiden'} ${openNavigation ? "flex" : "hidden"}`}>
+                <nav className={` fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent  ${openNavigation ? "flex" : "hidden"} `}>
                     <div className="relative z-2 flex flex-col justify-center items-center m-auto lg:flex-row">
                         {navigation.map((item) => (
                             <a key={item.id} href={item.url} onClick={handleClick}
